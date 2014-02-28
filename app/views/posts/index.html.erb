@@ -1,0 +1,14 @@
+<h1>Welcome to My Blog</h1>
+
+<ol>
+<% @posts.each do |post| %>
+  <li>
+    <div id="post_<%= post.id %>">
+      <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+      <p>
+        <%= post.content %>
+      </p>
+    </div>
+  </li>
+<% end %>
+</ol>
